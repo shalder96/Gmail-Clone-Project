@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>Gmail Clone</title>
+</head>
+<body class="bg-gray-100">
+  <div class="container relative p-10 ">
+
+    <!-- __________________left menu ____________________  -->
+
+    <div class="absolute top-0 left-0 z-50 flex flex-col w-20 gap-8 mx-auto h-60 bg-blue-50">
+      <div class="mx-auto mt-4 cursor-pointer "><span class="material-symbols-outlined ">
+        menu
+        </span></div>
+      <div class="flex flex-col items-center p-1 mx-auto transition duration-300 ease-in-out bg-blue-100 rounded-full cursor-pointer w-14 h-14"><span class="material-symbols-outlined">
+        mail
+        </span><p>Mail</p></div>
+      <div class="flex flex-col items-center p-1 mx-auto transition duration-300 ease-in-out rounded-full cursor-pointer w-14 h-14 hover:bg-blue-100"><span class="material-symbols-outlined">
+        chat
+        </span><p>Chat</p></div>
+      <div class="flex flex-col items-center p-1 mx-auto transition duration-300 ease-in-out rounded-full cursor-pointer w-14 h-14 hover:bg-blue-100"><span class="material-symbols-outlined">
+        groups
+        </span><p>Spaces</p></div>
+      <div class="flex flex-col items-center p-1 mx-auto transition duration-300 ease-in-out rounded-full cursor-pointer w-14 h-14 hover:bg-blue-100"><span class="material-symbols-outlined">
+        videocam
+        </span><p>Meet</p></div>
+    </div>
+    <!-- _______________________right part ______________________________  -->
+    <!-- _____________right_header _____________________  -->
+    <div class="absolute top-0 z-40 flex items-center w-full left-20 h-100">
+      <!-- _______________Gmail and Logo ________________  -->
+      <div class="flex flex-row items-center justify-center w-24 h-16 gap-2 ml-8 align-middle">
+        <div class="w-6 h-auto"><img src="Asset/gmail.png" alt="gmail_image" class="w-full"></div>
+        <div class=""><p class="text-xl antialiased font-medium text-gray-500">Gmail</p></div>
+      </div>
+      <!-- ___________________ search box ________________________  -->
+      <div class="relative flex items-center ml-33">
+        <svg class="absolute w-5 h-5 text-gray-500 pointer-events-none fill-current left-3 top-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M23.707,22.293l-6.32-6.32a9,9,0,1,0-1.414,1.414l6.32,6.32a1,1,0,0,0,1.414-1.414ZM17,10A7,7,0,1,1,10,3,7,7,0,0,1,17,10Z"/>
+        </svg>
+        <input type="text" placeholder="Search in emails" class="py-2 pl-12 pr-4 border rounded-full w-41 bg-blue-50 top-1/2 left-32 focus:outline-none focus:placeholder-transparent">
+        <span class="material-symbols-outlined tune">
+          tune
+          </span>
+      </div>
+      <!-- ______________________Active button _____________________  -->
+      <div class="flex flex-row items-center ml-10 ">
+        <button class="flex items-center justify-between px-4 py-2 rounded-full focus:outline-none bg-blue-50">
+          <span class="flex items-center">
+            <span class="w-2 h-2 mr-2 bg-green-400 rounded-full"></span>
+            Active
+          </span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 12a1 1 0 0 1-.707-.293l-3-3a1 1 0 1 1 1.414-1.414L10 9.586l2.293-2.293a1 1 0 0 1 1.414 1.414l-3 3a1 1 0 0 1-.707.293z" />
+          </svg>
+        </button>
+      </div>
+      <!-- _____________________ icons ______________________  -->
+      <div class="flex flex-row items-center gap-5 ml-8 text-gray-500">
+        <!-- ______________interrogation mark __________  -->
+        <span class="material-symbols-outlined">
+          help
+          </span>
+        <!-- ________________settings icon _______________  -->
+        <span class="material-symbols-outlined settings">
+          settings
+          </span>
+        <!-- ________________________ menu icons _________________________  -->
+        <span class="material-symbols-outlined">
+          apps
+          </span>
+      </div>
+      <!-- _____________account id _________________ -->
+      <div class="flex items-center justify-center w-8 h-8 ml-6 font-bold text-white rounded-full bg-fuchsia-600 ">S</div>
+    </div>
+
+
+
+    <!-- _______________ compose column start____________  -->
+    <div class="absolute flex flex-col left-28">
+      <!-- ______compose ______  -->
+      <div class="flex items-center w-40 px-8 py-4 mt-8 rounded-full cursor-pointer bg-cyan-200">
+        <span class="material-symbols-outlined">
+          edit
+          </span>
+          <p class="font-semibold">Compose</p>
+      </div>
+      <!-- _________inbox _________  -->
+      <div class="flex items-center w-56 gap-4 px-4 py-1 mt-8 font-semibold ease-in-out bg-blue-100 rounded-full">
+        <span class=" material-symbols-outlined">
+        inbox
+        </span>
+        <p>Inbox</p>
+      </div>
+      <!-- _________Star __________  -->
+      <div class="flex items-center w-56 gap-4 px-4 py-1 mt-2 antialiased ease-in-out rounded-full hover:bg-blue-100">
+        <span class="material-symbols-outlined">
+          star
+          </span>
+        <p>Starred</p>
+      </div>
+      <!-- __________ Snoozed ___________  -->
+      <div class="flex items-center w-56 gap-4 px-4 py-1 mt-2 antialiased ease-in-out rounded-full hover:bg-blue-100">
+        <span class="material-symbols-outlined">
+          schedule
+          </span>
+        <p>Snoozed</p>
+      </div>
+      <!-- __________________Important _________________  -->
+      <div class="flex items-center w-56 gap-4 px-4 py-1 mt-2 antialiased ease-in-out rounded-full hover:bg-blue-100">
+        <span class="material-symbols-outlined">
+          label_important
+          </span>
+        <p>Important</p>
+      </div>
+      <!-- _________ sent ___________  -->
+      <div class="flex items-center w-56 gap-4 px-4 py-1 mt-2 antialiased ease-in-out rounded-full hover:bg-blue-100">
+        <span class="material-symbols-outlined">
+          send
+          </span>
+        <p>Sent</p>
+      </div>
+      <!-- __________drafts ___________  -->
+      <div class="flex items-center w-56 gap-4 px-4 py-1 mt-2 antialiased ease-in-out rounded-full hover:bg-blue-100">
+        <span class="material-symbols-outlined">
+          draft
+          </span>
+        <p>Drafts</p>
+      </div>
+      <!-- ________more __________  -->
+      <div class="flex items-center w-56 gap-4 px-4 py-1 mt-2 antialiased ease-in-out rounded-full cursor-auto hover:bg-blue-100">
+        <span class="material-symbols-outlined">
+          expand_more
+          </span>
+        <p>More</p>
+      </div>
+      <!-- ________labels _________  -->
+      <div class="flex items-center justify-between w-56 px-4 py-1 mt-6 ease-in-out cursor-auto">
+        <p class="antialiased font-semibold">Labels</p>
+        <span class="material-symbols-outlined">
+          add
+          </span>
+      </div>
+      <!-- __________ scrum ___________  -->
+      <div class="flex items-center w-56 gap-4 px-4 py-1 mt-2 antialiased ease-in-out rounded-full hover:bg-blue-100">
+        <span class="material-symbols-outlined">
+          bookmark
+          </span>
+        <p>Scrum</p>
+      </div>
+      <!-- ___________ IMAP / Sent ______________  -->
+      <div class="flex items-center w-56 gap-4 px-4 py-1 mt-2 antialiased ease-in-out rounded-full hover:bg-blue-100">
+        <span class="material-symbols-outlined">
+          bookmark
+          </span>
+        <p>[IMAP]/Sent</p>
+      </div>
+    </div>
+    <!-- ________compose column end ____________  -->
+
+    <!-- __________________email box start here ______________________ -->
+    <div class="absolute right-0 flex flex-col p-6 bg-white border shadow-md h-50 rounded-2xl w-73 top-20 -z-20">
+      <div class="flex items-center justify-between text-gray-600">
+        <div class="flex items-center">
+          <span class="material-symbols-outlined">
+            check_box_outline_blank
+            </span>
+            <span class="mr-4 material-symbols-outlined">
+              expand_more
+              </span>
+              <span class="mr-4 material-symbols-outlined">
+                refresh
+                </span>
+                <span class="material-symbols-outlined">
+                  more_vert
+                  </span>
+        </div>
+        <div class="flex items-center justify-between">
+          <p>1-50 of 1282</p>
+          <span class="ml-4 material-symbols-outlined">
+            keyboard_arrow_left
+            </span>
+            <span class="ml-4 material-symbols-outlined">
+              keyboard_arrow_right
+              </span>
+              <span class="ml-4 material-symbols-outlined">
+                keyboard
+                </span>
+                <span class="material-symbols-outlined">
+                  keyboard_arrow_down
+                  </span>
+        </div>
+      </div>
+      <div class="flex flex-row items-start mt-2">
+        <div class="flex items-center py-4 text-blue-600 border-b-2 border-blue-600 border-solid hover:bg-gray-100 w-30">
+          <span class="material-symbols-outlined">
+            inbox
+            </span>
+            <p class="ml-2 font-semibold">Primary</p>
+        </div>
+        <!-- ____________ promotional tab ________________  -->
+        <div class="flex items-center py-4 ml-2 text-gray-600 hover:bg-gray-100 w-30">
+          <span class="material-symbols-outlined">
+            sell
+            </span>
+            <p class="ml-2 font-semibold">Promotions</p>
+        </div>
+        <!-- __________ social tab ___________  -->
+        <div class="flex items-center py-4 ml-2 text-gray-600 hover:bg-gray-100 w-30">
+          <span class="material-symbols-outlined">
+            group
+            </span>
+            <p class="ml-2 font-semibold">Social</p>
+        </div>
+      </div>
+      <!-- __________________emails column __________________________  -->
+      <div class="flex flex-col mt-4 overflow-x-hidden overflow-y-scroll">
+        <div class="flex items-center py-2 border-t border-b border-gray-200 cursor-pointer hover-container hover:shadow-md hover:text-black">
+            <span class="mr-2 text-gray-400 material-symbols-outlined">check_box_outline_blank</span>
+            <span class="mr-2 text-gray-400 material-symbols-outlined">star</span>
+            <span class="mr-2 text-gray-400 material-symbols-outlined">label_important</span>
+            <p class="w-48 overflow-hidden font-semibold whitespace-nowrap">PW</p>
+            <p class="flex-1 overflow-hidden font-semibold whitespace-nowrap">Important mail for two step verification</p>
+            <span class="ml-32 font-semibold">12:34 PM</span>
+        </div>
+        <div class="flex items-center py-2 border-t border-b border-gray-200 cursor-pointer hover-container hover:shadow-md hover:text-black">
+            <span class="mr-2 text-gray-400 material-symbols-outlined">check_box_outline_blank</span>
+            <span class="mr-2 text-gray-400 material-symbols-outlined">star</span>
+            <span class="mr-2 text-gray-400 material-symbols-outlined">label_important</span>
+            <p class="w-48 overflow-hidden font-semibold whitespace-nowrap">Internshala</p>
+            <p class="flex-1 overflow-hidden font-semibold whitespace-nowrap">Invitation To Apply From Earth5R</p>
+            <span class="ml-32 font-semibold">10:35 AM</span>
+        </div>
+        <div class="flex items-center py-2 border-t border-b border-gray-200 cursor-pointer hover-container hover:shadow-md hover:text-black">
+            <span class="mr-2 text-gray-400 material-symbols-outlined">check_box_outline_blank</span>
+            <span class="mr-2 text-gray-400 material-symbols-outlined">star</span>
+            <span class="mr-2 text-gray-400 material-symbols-outlined">label_important</span>
+            <p class="w-48 overflow-hidden font-semibold whitespace-nowrap">LinkedIn Job Alerts</p>
+            <p class="flex-1 overflow-hidden font-semibold whitespace-nowrap">“associate”: Thomson Reuters - Product Support Associate and more
+            </p>
+            <span class="ml-32 font-semibold">10:16 AM</span>
+        </div>
+        <div class="flex items-center py-2 border-t border-b border-gray-200 cursor-pointer hover-container hover:shadow-md hover:text-black">
+            <span class="mr-2 text-gray-400 material-symbols-outlined">check_box_outline_blank</span>
+            <span class="mr-2 text-gray-400 material-symbols-outlined">star</span>
+            <span class="mr-2 text-gray-400 material-symbols-outlined">label_important</span>
+            <p class="w-48 overflow-hidden font-semibold whitespace-nowrap ">Swiggy</p>
+            <p class="flex-1 overflow-hidden font-semibold whitespace-nowrap">Open for a speciallllll time! ✨🌙</p>
+            <span class="ml-32 font-semibold">09:41 AM</span>
+        </div>
+        <div class="flex items-center py-2 border-t border-b border-gray-200 cursor-pointer hover-container hover:shadow-md hover:text-black">
+            <span class="mr-2 text-gray-400 material-symbols-outlined">check_box_outline_blank</span>
+            <span class="mr-2 text-gray-400 material-symbols-outlined">star</span>
+            <span class="mr-2 text-gray-400 material-symbols-outlined">label_important</span>
+            <p class="w-48 overflow-hidden font-semibold whitespace-nowrap ">SSC Recruitment Board</p>
+            <p class="flex-1 overflow-hidden font-semibold whitespace-nowrap">SSC Group C & Junior Engineer Recruitment | 4680 Vacancies</p>
+            <span class="ml-32 font-semibold">09:41 AM</span>
+        </div>
+        <div class="flex items-center py-2 border-t border-b border-gray-200 cursor-pointer hover-container hover-container-important hover:shadow-md hover:text-black">
+            <span class="mr-2 text-gray-400 material-symbols-outlined">check_box_outline_blank</span>
+            <span class="mr-2 text-gray-400 material-symbols-outlined">star</span>
+            <span class="mr-2 text-yellow-500 material-symbols-outlined important">label_important</span>
+            <p class="w-48 overflow-hidden font-semibold whitespace-nowrap ">
+              PW Skills</p>
+            <p class="flex-1 overflow-hidden font-semibold whitespace-nowrap">Join The Doubt Clearing Class Of Full Stack Web Development
+            </p>
+            <span class="ml-32 font-semibold">08:01 PM</span>
+        </div>
+        <div class="flex items-center py-2 border-t border-b border-gray-200 cursor-pointer hover-container hover:shadow-md hover:text-black">
+            <span class="mr-2 text-gray-400 material-symbols-outlined">check_box_outline_blank</span>
+            <span class="mr-2 text-gray-400 material-symbols-outlined">star</span>
+            <span class="mr-2 text-gray-400 material-symbols-outlined">label_important</span>
+            <p class="w-48 overflow-hidden font-semibold whitespace-nowrap ">
+              Robin Sharma</p>
+            <p class="flex-1 overflow-hidden font-semibold whitespace-nowrap">the most valuable book I’ve ever released
+            </p>
+            <span class="ml-32 font-semibold">08:30 PM</span>
+        </div>
+        <div class="flex items-center py-2 border-t border-b border-gray-200 cursor-pointer hover-container hover:shadow-md hover:text-black">
+            <span class="mr-2 text-gray-400 material-symbols-outlined">check_box_outline_blank</span>
+            <span class="mr-2 text-gray-400 material-symbols-outlined">star</span>
+            <span class="mr-2 text-gray-400 material-symbols-outlined">label_important</span>
+            <p class="w-48 overflow-hidden font-semibold whitespace-nowrap ">
+              Amazon</p>
+            <p class="flex-1 overflow-hidden font-semibold whitespace-nowrap">Back To School: Up to 80% off | 8th to 27th April
+            </p>
+            <span class="ml-32 font-semibold">07:09 PM</span>
+        </div>
+        <div class="flex items-center py-2 border-t border-b border-gray-200 cursor-pointer hover-container hover:shadow-md hover:text-black">
+            <span class="mr-2 text-gray-400 material-symbols-outlined">check_box_outline_blank</span>
+            <span class="mr-2 text-gray-400 material-symbols-outlined">star</span>
+            <span class="mr-2 text-gray-400 material-symbols-outlined">label_important</span>
+            <p class="w-48 overflow-hidden font-semibold whitespace-nowrap ">Yahoo Mail </p>
+            <p class="flex-1 overflow-hidden font-semibold whitespace-nowrap">Hi Sourav, we noticed you haven't upgraded your mobile experience</p>
+            <span class="ml-32 font-semibold">April 9</span>
+        </div>
+      </div>
+    </div>
+    <!-- _________________ email box end here ________________  -->
+
+
+    <!-- right menu start here ____________________  -->
+    <div class="absolute z-10 flex flex-col items-center w-20 h-auto gap-8 pt-6 bg-blue-50 top-20 -right-20">
+      <div class="flex items-center justify-center w-10 h-10 ease-in-out rounded-full hover:cursor-pointer hover:bg-gray-300">
+        <img width="24" height="24" src="https://img.icons8.com/color/48/google-calendar--v2.png" alt="google-calendar--v2"/>
+      </div>
+      <div class="flex items-center justify-center w-10 h-10 ease-in-out rounded-full hover:cursor-pointer hover:bg-gray-300">
+        <img width="24" height="24" src="https://img.icons8.com/color/48/google-keep.png" alt="google-keep"/>
+      </div>
+      <div class="flex items-center justify-center w-10 h-10 ease-in-out rounded-full hover:cursor-pointer hover:bg-gray-300">
+        <img width="30" height="30" src="Asset/Google Tasks.png" alt="google-task"/>
+      </div>
+      <div class="flex items-center justify-center w-10 h-10 ease-in-out rounded-full hover:cursor-pointer hover:bg-gray-300">
+        <img width="24" height="24" src="https://img.icons8.com/fluency/48/google-contacts.png" alt="google-contacts"/>
+      </div>
+      <div class="flex items-center justify-center w-10 h-10 ease-in-out rounded-full hover:cursor-pointer hover:bg-gray-300">
+        <img width="20" height="20" src="https://img.icons8.com/android/24/plus.png" alt="plus"/>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
